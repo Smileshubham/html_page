@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.main_con{
+    background-color: rgb(65, 65, 65);
+    /* background-color: rgb(107, 108, 111); */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+header{
+    background-color: rgb(107, 108, 111);
+    
+    display: flex;
+    justify-content:space-between;
+            align-items: center;
+            border-bottom: 1px solid #666;
+            padding-bottom: 20px;
+            
+            
+}
+header .lft{
+    padding: 12px;
+    text-align: center;
+}
+.lft h1 {
+    font-size: 24px;
+    color: white;
+}
+.lft .h{
+    
+    font-weight: normal;
+    color: white;
+}
+.status {
+    
+    display: flex;
+    margin-right: 0px;
+    align-items: center
+}
+.status ul{
+    list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+}
+
+.status ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    
+}
+.user-info {
+    display: flex;
+    color: #ccc;
+    float: right;
+    margin-right: 39px;
+}
+.status.rectange{
+    
+
+
+}
+
+.username {
+    margin-right: 5px;
+    color: white;
+
+}
+
+.logout {
+    color: rgb(208, 130, 56);
+    text-decoration: none;
+
+}
+.nav{
+    
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content:space-between;
+            align-items: center;
+ 
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    
+}
+
+.nav ul li {
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
+
+.nav ul li a {
+    
+    text-decoration: none;
+    color: #ccc;
+    padding: 8px 35px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav ul li a.active {
+    background-color:rgb(52, 50, 49);
+    border-color: #ff9900;
+    color: #ff9900;
+}
+
+.date {
+    color: #999;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="main_con">
+        <header>
+            <div class="lft" style="text-decoration: none;"><a href="/Users/sourabh/Desktop/testing/main.html">
+            <h1>aws elemental <br><h1 class="h">LIVE</h1></h1></a></div>
+            <div class="status">
+                <ul>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">CPU</a></li>
+                    <li><a href="#">GPUs</a></li>
+                    <li><a href="#">Memory</a></li>
+                </ul>
+                <div class="rectangle" style="background-color:rgb(95, 94, 98); height: 8vh;
+                width: 17vw; ">
+                <br>
+                 <div class="user-info">
+                    <div>
+                        <br><br>
+                    <span class="username">(ABC):</span>
+                    <a href="#" class="logout">Logout</a></div>
+                </div>
+                </div>    
+        </div>
+        </header>
+        <div class="nav" >
+            <div>
+            <ul>
+                <li><a href="event.html">Event Control</a></li>
+                <li><a href="Presests.html" >Presets</a></li>
+                <li><a href="Profile.html" >Profiles</a></li>
+                <li><a href="Stats.html" >Stats</a></li>
+                <li><a href="Setting.html" >Settings</a></li>
+                <li><a href="Support.html" >Support</a></li>
+            </ul>
+            
+            </div>
+            <div style="padding-right:1vw;">
+                <span id="time" style="color: white;"></span>
+            </div>
+        </div>
+
+<h1 style="text-align: center; color: white; ">
+    Welcome! 🎉 <br>
+
+You can click on the Setting to see the given work.<br>
+
+Thank You 
+</h1>
+    </div>
+</body>
+</html>
+<script>
+    function time(){
+        const date=new Date();
+        const tim=date.toLocaleString();
+        document.querySelector('#time').textContent = tim;
+    }
+    setInterval(time, 1000);
+</script>
+<!-- <span id="time" style="color: white;"></span> -->
